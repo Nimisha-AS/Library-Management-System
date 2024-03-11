@@ -86,7 +86,7 @@ FOREIGN KEY (ISBN_BOOK) REFERENCES BOOKS(ISBN)
 INSERT INTO ISSUESTATUS VALUES 
 (4001, 3001, 'The Lord of the Rings', '2023-02-20', 9780140444486),
 (4002, 3002, 'To Kill a Mockingbird', '2023-04-15', 9780061120084),
-(4003, 3003, 'The Hitchhiker\'s Guide to the Galaxy', '2023-07-01', 9780385490747); 
+(4003, 3003, 'The Hitchhiker\'s Guide to the Galaxy', '2023-06-01', 9780385490747); 
 
 SELECT * FROM ISSUESTATUS;
 
@@ -126,10 +126,6 @@ AND CUSTOMER_ID NOT IN (SELECT DISTINCT ISSUED_CUST FROM ISSUESTATUS);
 -- Display the branch numbers and the total count of employees in each branch. 
 SELECT BRANCH_NO, COUNT(*) Total_Count FROM EMPLOYEE 
 GROUP BY BRANCH_NO; 
-
--- Display the branch numbers and the total count of employees in each branch.
-SELECT CUSTOMER_NAME FROM CUSTOMER 
-WHERE CUSTOMER_ID IN (SELECT ISSUE_ID FROM ISSUESTATUS); 
 
 -- Display the names of customers who have issued books in the month of June 2023. 
 SELECT C.CUSTOMER_NAME FROM 
