@@ -127,7 +127,7 @@ AND CUSTOMER_ID NOT IN (SELECT DISTINCT ISSUED_CUST FROM ISSUESTATUS);
 SELECT BRANCH_NO, COUNT(*) Total_Count FROM EMPLOYEE 
 GROUP BY BRANCH_NO; 
 
--- Display the names of customers who have issued books in the month of June 2023. 
+-- Display the branch numbers and the total count of employees in each branch.
 SELECT CUSTOMER_NAME FROM CUSTOMER 
 WHERE CUSTOMER_ID IN (SELECT ISSUE_ID FROM ISSUESTATUS); 
 
